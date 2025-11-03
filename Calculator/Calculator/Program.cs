@@ -1,5 +1,7 @@
 ﻿using System.Text.RegularExpressions;
+using CalculatorLibrary;
 
+Calculator calculator = new Calculator();
 bool endApp = false;
         
         // Display title as the C# console calculator app.
@@ -55,7 +57,7 @@ bool endApp = false;
             { 
                try
                {
-                  result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                  result = calculator.DoOperation(cleanNum1, cleanNum2, op);
                   if (double.IsNaN(result))
                   {
                      Console.WriteLine("This operation will result in a mathematical error.\n");
